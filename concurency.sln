@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Client", "App.Client\App.Client.csproj", "{607CF4EF-0DE9-479D-A915-3EB432C2053E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App.Client", "App.Client\App.Client.csproj", "{607CF4EF-0DE9-479D-A915-3EB432C2053E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App.Web.Api.Contracts", "App.Web.Api.Contracts\App.Web.Api.Contracts.csproj", "{41335133-0054-417F-8C0F-1A6CACBCFA44}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Web.Api", "App.Web.Api\App.Web.Api.csproj", "{09FB3921-7188-4A36-9F84-923F0847A135}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Console", "App.Console\App.Console.csproj", "{DF83E8C6-A92D-4837-B035-309FF39D10E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Client.Console", "App.Console\App.Client.Console.csproj", "{DF83E8C6-A92D-4837-B035-309FF39D10E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

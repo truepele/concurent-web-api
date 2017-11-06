@@ -1,12 +1,11 @@
 ﻿using System.Diagnostics;
-using App.Client;
 using App.Client.ApiInterfaces;
 using App.Client.Mappings;
 using App.Client.Services;
 using AutoMapper;
 using Refit;
 
-namespace App.Console
+namespace App.Client.Console
 {
     class Program
     {
