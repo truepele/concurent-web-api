@@ -1,10 +1,8 @@
 ﻿using System.Collections.Generic;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using App.Web.Api.Contracts;
 using App.Web.Api.Infrastructure;
-using App.Web.Api.Infrastructure.ETag;
+using App.Web.Api.Infrastructure.ActionResults;
 using App.Web.Api.Infrastructure.ParameterBindings;
 
 namespace App.Web.Api.Controllers

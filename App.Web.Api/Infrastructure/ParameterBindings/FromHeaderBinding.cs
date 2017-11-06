@@ -14,18 +14,17 @@ namespace App.Web.Api.Infrastructure.ParameterBindings
     {
         private readonly string _name;
 
-        public FromHeaderParameterBinding(HttpParameterDescriptor parameterDescriptor, string headerName) : base(parameterDescriptor)
+        public FromHeaderParameterBinding(HttpParameterDescriptor parameterDescriptor, string headerName) : base(
+            parameterDescriptor)
         {
             if (string.IsNullOrEmpty(headerName))
-            {
                 throw new ArgumentNullException(nameof(headerName));
-            }
             _name = headerName;
         }
 
         public override Task ExecuteBindingAsync(
-            ModelMetadataProvider metadataProvider, 
-            HttpActionContext actionContext, 
+            ModelMetadataProvider metadataProvider,
+            HttpActionContext actionContext,
             CancellationToken cancellationToken)
         {
             if (actionContext.Request.Headers.TryGetValues(_name, out var values))
@@ -36,8 +35,9 @@ namespace App.Web.Api.Infrastructure.ParameterBindings
                 }
                 catch (Exception exception)
                 {
-                    var error = new HttpError("The request is invalid.") { MessageDetail = exception.Message };
-                    throw new HttpResponseException(actionContext.Request.CreateErrorResponse(HttpStatusCode.BadRequest, error));
+                    var error = new HttpError("The request is invalid.") {MessageDetail = exception.Message};
+                    throw new HttpResponseException(
+                        actionContext.Request.CreateErrorResponse(HttpStatusCode.BadRequest, error));
                 }
             }
             else if (Descriptor.IsOptional)
@@ -46,8 +46,12 @@ namespace App.Web.Api.Infrastructure.ParameterBindings
             }
             else
             {
-                var error = new HttpError("The request is invalid.") { MessageDetail = $"The `{_name}` header is required." };
-                throw new HttpResponseException(actionContext.Request.CreateErrorResponse(HttpStatusCode.BadRequest, error));
+                var error = new HttpError("The request is invalid.")
+                {
+                    MessageDetail = $"The `{_name}` header is required."
+                };
+                throw new HttpResponseException(
+                    actionContext.Request.CreateErrorResponse(HttpStatusCode.BadRequest, error));
             }
 
             return Task.CompletedTask;

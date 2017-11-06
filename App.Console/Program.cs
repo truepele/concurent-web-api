@@ -7,7 +7,7 @@ using Refit;
 
 namespace App.Client.Console
 {
-    class Program
+    internal class Program
     {
         private static void Main(string[] args)
         {
@@ -15,7 +15,7 @@ namespace App.Client.Console
             var mapper = new MapperConfiguration(expression => expression.AddProfile(new DtoMappings())).CreateMapper();
             var s = new SomeService(api, mapper);
             var m = s.Get(0);
-            
+
             Debug.WriteLine(m.ETag);
 
             s.Update(m);

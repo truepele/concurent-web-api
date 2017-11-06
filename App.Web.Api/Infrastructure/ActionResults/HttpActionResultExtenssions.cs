@@ -1,7 +1,6 @@
 ﻿using System.Web.Http;
-using App.Web.Api.Infrastructure.ActionResults;
 
-namespace App.Web.Api.Infrastructure.ETag
+namespace App.Web.Api.Infrastructure.ActionResults
 {
     public static class HttpActionResultExtenssions
     {

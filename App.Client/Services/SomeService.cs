@@ -41,7 +41,7 @@ namespace App.Client.Services
             }
             catch (Exception e) when (e.InnerException is ApiException)
             {
-                Debug.WriteLine(((ApiException)e.InnerException).Content);
+                Debug.WriteLine(((ApiException) e.InnerException).Content);
                 throw;
             }
         }
